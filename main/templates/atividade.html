@@ -9,17 +9,26 @@
     <table class="table">
         <thead>
           <tr>
+            <th scope="col">id</th>
             <th scope="col">Nome</th>
             <th scope="col">Data de início</th>
+            <th scope="col">Cod. Projeto</th>
             <th scope="col">Descrição</th>
             <th scope="col">Cod. Analista</th>
             <th scope="col">Cod. Programador</th>
-            <th scope="col">Cod. Projeto</th>
           </tr>
         </thead>
         <tbody>
             {% for atv in atividades %}
-            {{atv.nome_atividade}}
+            <tr>
+              <td>{{atv.id}}</td>
+              <td>{{atv.nome_atividade}}</td>
+              <td>{{atv.data_inicio_atividade}}</td>
+              <td>{{atv.cod_projeto}}</td>
+              <td>{{atv.descricao_atividade}}</td>
+              <td>{{atv.cod_analista}}</td>
+              <td>{{atv.cod_programador}}</td>
+            </tr>
             {% endfor %}
         </tbody>
       </table>
