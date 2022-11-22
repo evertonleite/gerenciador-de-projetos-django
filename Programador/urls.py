@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from main.views import cadastroAnalista, cadastroAtividade, cadastroProgramador, cadastroProjeto
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
+    path('', include('main.urls')),
+    path('cadastro-analista/', cadastroAnalista, name = 'cadastroAnalista'),
+    path('cadastro-atividade/', cadastroAtividade, name = 'cadastroAtividade'),
+    path('cadastro-programador/', cadastroProgramador, name = 'cadastroProgramador'),
+    path('cadastro-projeto/', cadastroProjeto, name = 'cadastroProjeto'),
+    
 ]
